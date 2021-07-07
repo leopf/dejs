@@ -68,8 +68,8 @@ function NewTemplate(script: string): Template {
     const output: Array<string> = [];
     await new Promise((resolve) => {
       const args = {
-        ...params,
         include,
+        ...params,
         $$OUTPUT: output,
         $$FINISHED: resolve,
         $$ESCAPE: escape,
